@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS Tutorial</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/tutorialcontroller.js"></script>
+	<!-- app.js must be above controller.js ! we specify app in app.js, and the controller uses that 'app' from app.js-->
+</head>
+<body>
+	<div id="content" ng-app="TutorialApp" ng-controller="TutorialController">
+		<input type="text" ng-model="inputValue" />
+		{{inputValue}}
+		<!-- this is binding, no need to go to controller here, you're already creating the variable at ng-model, and it's constantly updated -->
+
+		<!-- {{info}}
+		use this to display information, scope stuff is available from {{}} -->
+	</div>
+</body>
+</html>
