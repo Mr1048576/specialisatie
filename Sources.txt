@@ -11,4 +11,6 @@ Responsive with AngularJS: https://www.youtube.com/watch?v=bDuQ-TlyE8c&list=WL&i
 
 Filters presentation(no code): https://www.youtube.com/watch?v=L4FJ_kuO9Rc
 
+Many Angular benefits(pusher, animations, real-time...): https://www.youtube.com/watch?v=8uj7YSqby7s&index=35&list=WL
+
 Important other sources mentioned here: http://campus.codeschool.com/courses/shaping-up-with-angular-js/wrap-up-video
