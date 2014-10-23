@@ -1,0 +1,32 @@
+<ion-view title="Facebook">
+  
+  <ion-content class="has-header newsitem" ng-init="initSingle();">
+    
+    <div class="card list-inset facebook">
+        
+        <ion-item class="item item-newsitem">
+            
+            <div class="infoHolder">
+              <div class="info left">
+                <span>Likes:</span>{{post.likes.data.length}}
+              </div>
+              <div class="info">
+                <span>Reacties:</span>{{post.comments.data.length}}
+              </div>
+              <div class="info right">
+                <a ng-click="openLink('{{post.link}}');" class="facebookLink" ng-show="post.type != 'link'">Facebook</a>
+                <a ng-click="openLink('{{post.link}}');" class="sharedlink" ng-show="post.type == 'link'">Bekijk Link</a>
+              </div>
+            </div>
+            <div class="imgHolder" ng-show="post.picture">
+              <img ng-src="{{post.picture}}" alt="">
+            </div>
+            <p ng-bind-html="post.message"></p>
+
+        </ion-item>
+        
+    </div>
+    
+  </ion-content>
+  
+</ion-view>

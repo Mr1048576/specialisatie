@@ -1,0 +1,31 @@
+<ion-view title="{{page.title}}">
+ 
+ <ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  
+  <ion-content class="has-header page" ng-init="initSingle();">
+    
+    <div class="card list-inset">
+
+        <ion-item class="item item-page">
+
+            <a class="partner top" ng-show="page.partner" ng-click="openLink('{{page.partner.link}}');">
+              <img ng-src="{{page.partner.filename}}" alt="{{page.partner.name}}">
+            </a>
+
+            <h1>{{ page.title }}</h1>
+            <div ng-bind-html="page.content"></div>
+            
+            <a class="partner bottom" ng-show="page.partner" ng-click="openLink('{{page.partner.link}}');" href="{{page.partner.link}}">
+              <img ng-src="{{page.partner.filename}}" alt="{{page.partner.name}}">
+            </a>
+
+
+        </ion-item>
+        
+    </div>
+    
+  </ion-content>
+  
+</ion-view>

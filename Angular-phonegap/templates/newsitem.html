@@ -1,0 +1,26 @@
+<ion-view title="{{newsItem.title}}">
+  
+  <ion-content class="has-header newsitem" ng-init="initSingle();">
+    
+    <div class="card list-inset">
+        
+        <ion-item class="item item-newsitem">
+
+			<a class="partner top" ng-show="newsItem.partner" ng-click="openLink('{{newsItem.partner.link}}');">
+              <img ng-src="{{newsItem.partner.filename}}" alt="{{newsItem.partner.name}}">
+            </a>
+
+            <h1>{{ newsItem.title }}</h1>
+            <div ng-bind-html="newsItem.content"></div>
+
+            <a class="partner bottom" ng-show="newsItem.partner" ng-click="openLink('{{newsItem.partner.link}}');">
+              <img ng-src="{{newsItem.partner.filename}}" alt="{{newsItem.partner.name}}">
+            </a>
+
+        </ion-item>
+        
+    </div>
+    
+  </ion-content>
+  
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view title="Facebook">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  
+    <ion-content class="has-header news facebook" ng-init="initOverview();">
+    
+        <span class="loader" ng-show="!facebook">
+           <img src="http://localhost/studentapp-mobile/img/ajax-loader.gif">
+        </span>
+
+        <ion-refresher class="refresher" pulling-text="" on-refresh="doRefresh()"></ion-refresher>
+
+        <div id="errors"></div>
+
+        <div class="card list-inset">
+
+            <ion-item ng-repeat="post in facebook" class="item item-news" href="#/app/facebook/{{fib}}/post/{{post.id}}">
+                <div class="imgHolder" ng-show="post.picture">
+                  <img ng-src="{{post.picture}}" alt="">
+                </div>
+                <p ng-bind-html="post.message"></p>
+                <a class="button button-small button-accent" href="#/app/facebook/{{fib}}/post/{{post.id}}">Lees meer &raquo;</a>
+            </ion-item>
+
+        </div>
+    
+  </ion-content>
+    
+</ion-view>

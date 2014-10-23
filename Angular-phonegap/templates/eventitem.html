@@ -1,0 +1,59 @@
+<ion-view title="Event">
+  
+  <ion-content class="has-header eventitem" ng-init="initSingle();">
+    
+    <div class="card list-inset">
+        
+        <ion-item class="item item-eventitem">
+
+            <h1 ng-class="{facebook: event.facebook_event_id != 0}" >
+              {{ event.title }}
+              <img ng-src="{{event.facebook.cover.source}}" alt="" class="coverBack">
+            </h1>
+
+      			<div class="infoHolder" ng-class="{facebook: event.facebook_event_id != 0}">
+
+              <div class="info left">
+                <span>Van:</span> {{event.start_time}}
+              </div>
+              <div class="info right">
+                <span>Tot:</span> {{event.end_time}}
+              </div>
+              <div class="info bottom">
+                <span>Locatie:</span> {{event.location}}
+              </div>
+              
+              <div class="facebookInfo" ng-show="event.facebook_event_id">
+                
+                <div class="info left">
+                  <span>Aanwezig: {{event.facebook.attending_count}}</span>
+                </div>
+                <div class="info right">
+                  <span>Misschien: {{event.facebook.maybe_count}}</span>
+                </div>
+
+              </div>
+
+
+            </div>
+
+            <a class="partner top" ng-show="event.partner" ng-click="openLink('{{event.partner.link}}');">
+              <img ng-src="{{event.partner.filename}}" alt="{{event.partner.name}}">
+            </a>
+
+            <p ng-bind-html="event.description"></p>
+
+            <a class="button button-small button-accent" ng-click="openLink('{{event.partner.link}}');">Bekijk op facebook &raquo;</a>
+
+            <h2>Locatie:</h2>
+
+            <div id="map_canvas">
+      			</div>
+
+        </ion-item>
+        
+    </div>
+    
+  </ion-content>
+  
+</ion-view>

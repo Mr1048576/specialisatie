@@ -1,0 +1,31 @@
+<ion-view title="{{curCat.name}}">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  
+    <ion-content class="has-header news" ng-init="initOverview();">
+    
+        <span class="loader" ng-show="!newsItems">
+           <img src="http://localhost/studentapp-mobile/img/ajax-loader.gif">
+        </span>
+
+        <ion-refresher class="refresher" pulling-text="" on-refresh="doRefresh()"></ion-refresher>
+
+        <div id="errors"></div>
+
+        <div class="card list-inset">
+
+            <ion-item ng-repeat="news in newsItems | filter:{category_id: curCat.id}" class="item item-news" href="#/app/newsitem/{{news.id}}">
+
+                <div class="partner" ng-show="false"></div>
+
+                <h1>{{ news.title }}</h1>
+                <p ng-bind-html="news.content"></p>
+                <a class="button button-small button-accent" href="#/app/newsitem/{{news.id}}">Lees meer &raquo;</a>
+            </ion-item>
+
+        </div>
+    
+  </ion-content>
+    
+</ion-view>

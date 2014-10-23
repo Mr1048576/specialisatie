@@ -1,0 +1,35 @@
+<ion-view title="Events">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  
+    <ion-content class="has-header events" ng-init="initOverview();">
+
+    <ion-refresher class="refresher" pulling-text="" on-refresh="doRefresh()"></ion-refresher>
+    
+    <div class="card list-inset">
+        
+        <ion-item ng-repeat="event in events" class="item item-events" href="#/app/event/{{event.id}}">
+            <h1>{{ event.title }}</h1>
+
+            <div class="infoHolder">
+              <div class="info left">
+                <span>Van:</span> {{event.start_time}}
+              </div>
+              <div class="info right">
+                <span>Tot:</span> {{event.end_time}}
+              </div>
+              <div class="info bottom">
+                <span>Locatie:</span> {{event.location}}
+              </div>
+            </div>
+
+            <p ng-bind-html="event.description"></p>
+            <a class="button button-small button-accent" href="#/app/event/1">Lees meer &raquo;</a>
+        </ion-item>
+        
+    </div>
+    
+  </ion-content>
+    
+</ion-view>
