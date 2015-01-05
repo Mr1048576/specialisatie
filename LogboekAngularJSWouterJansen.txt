@@ -1,11 +1,12 @@
+Brief summary of sources and other hints and tips I used over time to learn AngularJS.
+
 https://www.youtube.com/watch?v=r1A1VR0ibIQ
 https://www.youtube.com/watch?v=tnXO-i7944M
 
 https://www.youtube.com/watch?v=-8WauHn2DxQ
 
-
 https://angularjs.org/
--> Followed courses
+-> Followed courses: Flatlanders Gemstore
 
 Responsive with AngularJS: https://www.youtube.com/watch?v=bDuQ-TlyE8c&list=WL&index=33
 
@@ -15,12 +16,15 @@ Many Angular benefits(pusher, animations, real-time...): https://www.youtube.com
 
 Important other sources mentioned here: http://campus.codeschool.com/courses/shaping-up-with-angular-js/wrap-up-video
 
+Scotch and its creative "inhabitants" have been an amazing help in seeing AngularJS in a different, creative way:
+
 http://scotch.io/tag/angular-js
 https://scotch.io/tutorials/all-about-the-built-in-angularjs-filters
 https://scotch.io/tutorials/animating-angular-apps-ngshow-and-nghide
 https://scotch.io/tutorials/the-many-ways-to-use-ngclass
 https://scotch.io/tutorials/building-dynamic-angular-forms-with-ngrepeat-and-ngform
 
+--------
 
 From separate Notes: (these were not in the GitHub this whole time)
 DO NOT FORGET "NG-APP" AT HTML!!!!
@@ -40,3 +44,6 @@ ng-options="bootstrap.url as bootstrap.name for bootstrap in bootstraps"
 ng-src: use this if you wish to do stuff with images (like ng-show/hide)
 
 Less code to write, means less code to test, means less code to debug, means less code to maintain.
+
+
+I'm probably forgetting a few things, or left some out, I've been trying and experimenting, there's more in the full report:(wouterjansen1.mctantwerpen.be/docs/VerslagAngularJSWouterJansen.pdf)
